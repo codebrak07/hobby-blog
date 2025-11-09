@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby Blog - Video Editing & Gaming</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: rgb(246, 255, 0);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: rgb(255, 0, 204);
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            text-shadow: 1px 1px 10px black;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .intro-section {
+            background: rgb(0, 0, 0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            color: #11ff00;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-shadow: 5px 5px 50px #11ff00;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            line-height: 1.8;
+        }
+
+        .hobby-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-section h2 {
+            font-family: ;
+            color: #fd0000;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            text-shadow: 5px 5px 50px black;
+        }
+
+        .hobby-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .hobby-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .hobby-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .hobby-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .skills-list li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 20px;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .game-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #667eea;
+        }
+
+        .game-card:hover {
+            background: #304abc;
+            color: white;
+            cursor: pointer;
+            box-shadow: 5px 5px 50px black;
+        }
+
+        .game-card h3 {
+            margin-bottom: 0.8rem;
+            color: #764ba2;
+            font-size: 1.3rem;
+        }
+
+        .game-card:hover h3 {
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .hobby-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Hobby Blog</h1>
+        <p>Video Editing & Gaming Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#editing">Video Editing</a>
+        <a href="#gaming">Gaming</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="intro-section">
+            <h2>Welcome to My World!</h2>
+            <p>
+                Hey there! I am Aalekh Maheshwari and I am passionate about two things: creating video edits and dominating in my favorite video games. As these two things gives me immense level of happiness whether creating any edit or playing video games.
+                Whether I'm crafting the perfect Cristiano Ronaldo Edit or strategizing in Clash of Clans, 
+                I'm always looking to level up my skills in every field.
+            </p>
+        </section>
+
+        <section id="editing" class="hobby-section">
+            <h2>🎬 Video Editing</h2>
+            <p>I love bringing stories to life through my passion which is video editing. My specialty is in makimg football edits, especially of my idol - Cristiano Ronaldo, but I can create amazing edits on any topic whteher it is on sports, documentary or vlogs!</p>
+            
+            <div class="hobby-content">
+                <div class="hobby-card">
+                    <h3>Ronaldo Edits</h3>
+                    <p>I have created many types of ronaldo edits for example the hard edits, 3d edits, his goal edits with phonk or just as a person handsome type edit... I am a very huge fan of ronaldo.</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <h3>Custom Edits</h3>
+                    <p>I can make professional edits for any sports player, musician, or content creator. Transitions, effects, color correction and the story telling by myself in the edit are my qualities which make me unique from other editors.</p>
+                </div>
+                
+                <div class="hobby-card">
+                    <h3>Skills & Tools</h3>
+                    <ul class="skills-list">
+                        <li>After Effects 2024</li>
+                        <li>Topaz Video Enhancer AI</li>
+                        <li>Blender</li>
+                        <li>Motion Graphics</li>
+                        <li>Typography edits</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="gaming" class="hobby-section">
+            <h2>🎮 Gaming</h2>
+            <p>When I'm not editing videos, you'll find me gaming! Here are my favorite games where I spend most of my time:</p>
+            
+            <div class="games-grid">
+                <div class="game-card">
+                    <h3>Clash of Clans</h3>
+                    <p>Building bases, raiding villages, and leading my clan to victory!</p>
+                </div>
+                
+                <div class="game-card">
+                    <h3>FC Mobile</h3>
+                    <p>Dominating the field with my ultimate team and scoring legendary goals.</p>
+                </div>
+                
+                <div class="game-card">
+                    <h3>Among Us</h3>
+                    <p>Master of deception and detective work. Can you trust me?</p>
+                </div>
+                
+                <div class="game-card">
+                    <h3>Free Fire</h3>
+                    <p>Battle royale champion! Surviving till the end and getting that Booyah!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
