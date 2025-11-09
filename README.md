@@ -7,22 +7,11 @@ A personal website showcasing my hobbies: video editing and gaming.
 
 ### Sections
 - **About** - Introduction to my hobbies
-- **Video Editing** - Ronaldo edits, custom edits, and skills (After Effects, Blender, Motion Graphics)
+- **Video Editing** - Ronaldo edits, custom edits, and skills (After Effects, Blender, Topaz Video Enhancer AI)
 - **Gaming** - My favorite games: Clash of Clans, FC Mobile, Among Us, and Free Fire
-
-### Features
-- Animated gradient background with floating color effects
-- Responsive design (works on mobile and desktop)
-- Hover effects on cards and navigation
-- Sticky navigation bar
-
-### Technologies
-- HTML5
-- CSS3 (animations, grid, flexbox)
 
 ## Files
 - `index.html` - Main website file
-- `Love.ttf` - Custom font (optional)
 
 ---
 
